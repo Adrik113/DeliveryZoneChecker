@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Delivery Zone Checker</title>
+    <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+    <h1>Delivery Zone Checker</h1>
+    
+    <!-- ✅ Corrected action and method -->
+    <form action="/checkDelivery" method="post">
+        <label>Latitude:</label>
+        <input type="text" name="latitude" required>
+        <label>Longitude:</label>
+        <input type="text" name="longitude" required>
+        <button type="submit">Check</button>
+    </form>
+
+    <div th:if="${latitude != null}">
+        <p>Latitude: <span th:text="${latitude}"></span></p>
+        <p>Longitude: <span th:text="${longitude}"></span></p>
+        
+        <!-- ✅ Fixed missing closing tag and correct Thymeleaf syntax -->
+        <h3 th:text="${inZone} ? 'Inside Delivery Zone' : 'Outside Delivery Zone'"></h3>
+    </div>
+</body>
+</html>

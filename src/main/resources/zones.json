@@ -1,0 +1,15 @@
+[
+    {
+        "name": "Dunn, NC",
+        "latitude":35.3063,
+        "longitude": -78.6089,
+        "radius": 10
+    },
+    {
+        "name": "Erwin, NC",
+        "latitude":35.3238,
+        "longitude": -78.6767,
+        "radius": 8
+    }
+
+]
